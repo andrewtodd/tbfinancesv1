@@ -56,10 +56,6 @@ gem 'kaminari'
 # used for authentication
 gem 'devise'
 
-#gem 'mysqltopostgres', git: "https://github.com/maxlapshin/mysql2postgres.git"
-
-gem 'mysqltopostgres'
-
 gem 'pg'
 
 gem 'rails_12factor', group: :production
