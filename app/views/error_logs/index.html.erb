@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class='title'>ErrorLog</h1>
+
+
+<table>
+	<thead>
+		<tr class='header'>
+			<th>Date</th>
+			<th>File Line</th>
+			<th>Transaction Name</th>
+			<th>Error</th>
+	</thead>
+
+	<tbody>
+	<% @error_logs.each do |logged_error| %>
+		<tr class="<%= cycle('list_line_odd','list_line_even') %>">
+			<td><%= logged_error.date %></td>
+			<td><%= logged_error.file_row %></td>
+			<td><%= logged_error.transaction_name %></td>
+			<td><%= logged_error.error %></td>
+		</tr>
+	<% end %>
+	</tbody>
+</table>

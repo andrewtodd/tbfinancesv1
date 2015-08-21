@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class='title'>Listing Owners</h1>
+
+<table class='owners'>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Owed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @owners.each do |owner| %>
+      <tr class="<%= cycle('list_line_odd','list_line_even') %>">
+        <td><%= owner.first_name %></td>
+        <td><%= owner.last_name %></td>
+        <td><%= owner.phone %></td>
+        <td><%= owner.email %></td>
+        <td id='sum' class="<%= update_currency_class(get_amount_owed(owner),'') %>"><%=number_to_currency(get_amount_owed(owner), unit: "£")%></td>
+         <td><%= link_to 'Show', owner %></td>
+        <td><%= link_to 'Edit', edit_owner_path(owner) %></td>
+        <td><%= link_to 'Destroy', owner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Owner', new_owner_path %>

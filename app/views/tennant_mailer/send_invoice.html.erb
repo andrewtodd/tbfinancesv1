@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi <%= @tennant.first_name + @tennant.last_name %></h1>
+    <p>
+      Please find your invoice for <%= @month %> attached.
+    </p>
+    <p>
+      If you have any queries please feel free to give us a call.
+    </p>
+    <p>
+      Many thanks,
+    </p>
+    <p>
+      <%= @owner %>
+    </p>
+    <p>
+      Tel: <%= @telephone %>
+    </p>
+  </body>
+</html>

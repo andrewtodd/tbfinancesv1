@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address line1:</strong>
+  <%= @property.address_line1 %>
+</p>
+
+<p>
+  <strong>Address line2:</strong>
+  <%= @property.address_line2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @property.city %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @property.country %>
+</p>
+
+<p>
+  <strong>Postal code:</strong>
+  <%= @property.postal_code %>
+</p>
+<p>
+  <strong>Monthly Charge:</strong>
+  <%= @property.monthly_charge %>
+</p>
+
+<div id='tennants'>
+  <strong>Tennants:</strong>
+  <% @property.tennants.each do |tennant| %>
+  <div id='tennant'>
+    <%= tennant.first_name + " " + tennant.last_name %>
+  </div>
+  <% end %>
+</div>
+
+<%= link_to 'Edit', edit_property_path(@property) %> |
+<%= link_to 'Back', properties_path %>

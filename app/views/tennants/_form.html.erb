@@ -1,0 +1,45 @@
+<%= form_for(@tennant) do |f| %>
+  <% if @tennant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tennant.errors.count, "error") %> prohibited this tennant from being saved:</h2>
+
+      <ul>
+      <% @tennant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :property_id %><br>
+    <%= f.number_field :property_id %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.number_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+    <div class="field">
+    <%= f.label :transaction_description %><br>
+    <%= f.text_field :transaction_description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

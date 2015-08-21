@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  generated_by: MyString
+  amount: 9.99
+  type: 
+  date: 2015-07-15
+  tennant_id: 1
+  name: MyString
+  category: MyString
+  owner_id: 1
+
+two:
+  generated_by: MyString
+  amount: 9.99
+  type: 
+  date: 2015-07-15
+  tennant_id: 1
+  name: MyString
+  category: MyString
+  owner_id: 1

@@ -1,0 +1,45 @@
+<!--<p id="notice"><%= notice %></p>
+-->
+
+<div id='properties'>
+  <h1>Listing Properties</h1>
+
+  <div id='new_property'><%= link_to 'New Property', new_property_path%></div>
+
+  <% @properties.each do |property| %>
+    <div id='property'>
+      <div id='property_image'>
+      </div>
+      <div id='property_header'>
+        <div id='property_name'><%= "Property " + "#{property.id}." %></div>
+        <div id='editors'>
+        </div>
+      </div>
+      <ul id='property_address'>
+        <li><%= property.address_line1 %></li>
+        <li><%= property.address_line2 %></li>
+        <li><%= property.city %></li>
+        <li><%= property.country %></li>
+        <li><%= property.postal_code %></li>
+        <li><%= property.monthly_charge %></li>
+      </ul>
+      <div id='tennants'>
+        <strong>Tennants:</strong>
+        <% property.tennants.each do |tennant| %>
+          <div id='tennant'>
+            <%= tennant.first_name + " " + tennant.last_name %>
+          </div>
+        <% end %>
+      </div>
+      <div id='editors'>
+        <div><%= link_to 'Edit', edit_property_path(property) %></div>
+        <div><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<br>
+
+</div>
+

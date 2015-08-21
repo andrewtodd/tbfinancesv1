@@ -1,0 +1,117 @@
+<!--<p id="notice"><%= notice %></p>
+-->
+
+<div id='tax_container'>
+  <div id='tax_summary'>
+    <div id='title'>
+      <span>Taxes</span>
+    </div>
+    <div id='tax_year_selector_container'> <!-- hack to enable the selector to be positioned absolutely-->  
+      <div id='tax_year_selector'>
+        <span>Select a Tax Year</span>
+        <ul>
+         <li><%= link_to '2014', {:controller=>'taxes', :action=>'index', :year=>'2014'} %></li>
+         <li><%= link_to '2015', {:controller=>'taxes', :action=>'index', :year=>'2015'} %></li>
+         <li><%= link_to '2016', {:controller=>'taxes', :action=>'index', :year=>'2016'} %></li>
+         <li><%= link_to '2017', {:controller=>'taxes', :action=>'index', :year=>'2017'} %></li>
+         <li><%= link_to '2018', {:controller=>'taxes', :action=>'index', :year=>'2018'} %></li>
+         <li><%= link_to 'All', {:controller=>'taxes', :action=>'index', :year=>'ALL'} %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id='taxes'>
+    <div id='tax_table_title'>
+      <span>UK Taxes</span>
+    </div>
+    <table class='taxes'>
+      <thead>
+        <tr class='header'>
+          <th class='tax_year'>Tax Year</th>
+          <th class='rent'>Rent</th>
+          <th class='other_income'>Other Income</th>
+          <th class='mortgage'>Mortgage</th>
+          <th class='insurance'>Insurance</th>
+          <th class='repairs'>Repairs</th>
+          <th class='real_estate'>Real Estate</th>
+          <th class='solicitor'>Solicitor</th>
+          <th class='council'>Council</th>
+          <th class='contents'>Contents</th>
+          <th class='gas'>Energy</th>
+          <th class='car'>Car</th>
+          <th class='upgrades'>Upgrades</th>
+        </tr>
+      </thead>
+
+
+      <tbody>
+      <% (@tax_years).each do |year| %> <!-- rather than run through a list of years, in the future the array will be populated by a drop down list of years
+      that way we will only have to do the calculation for the years the user cares about-->
+
+        <% @uk_tax_year = get_tax_for_year(year,'UK') %>
+        <tr class="<%= cycle('list_line_odd','list_line_even') %>">
+     	   	<td class='date'><%= year %></td>
+          <td class='rent'><%= number_to_currency(@uk_tax_year['rent'], unit: "£")%></td>
+ 	        <td class='rent'><%= number_to_currency(@uk_tax_year['other_income'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@uk_tax_year['mortgage'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@uk_tax_year['insurance'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@uk_tax_year['repairs'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@uk_tax_year['real_estate'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@uk_tax_year['solicitor'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@uk_tax_year['council'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@uk_tax_year['contents'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@uk_tax_year['gas'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@uk_tax_year['car'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@uk_tax_year['upgrades'], unit: "£")%></td>
+		    </tr>
+      <% end %>
+      </tbody>
+    </table>
+    </p>
+    <div id='tax_table_title'>
+      <span>US Taxes</span>
+    </div>
+    <table class='taxes'>
+      <thead>
+        <tr class='header'>
+          <th class='tax_year'>Tax Year</th>
+          <th class='rent'>Rent</th>
+          <th class='other_income'>Other Income</th>
+          <th class='mortgage'>Mortgage</th>
+          <th class='insurance'>Insurance</th>
+          <th class='repairs'>Repairs</th>
+          <th class='real_estate'>Real Estate</th>
+          <th class='solicitor'>Solicitor</th>
+          <th class='council'>Council</th>
+          <th class='contents'>Contents</th>
+          <th class='gas'>Energy</th>
+          <th class='car'>Car</th>
+          <th class='upgrades'>Upgrades</th>
+        </tr>
+      </thead>
+
+
+      <tbody>
+      <% (@tax_years).each do |year| %> <!-- rather than run through a list of years, in the future the array will be populated by a drop down list of years
+      that way we will only have to do the calculation for the years the user cares about-->
+        <% @us_tax_year = get_tax_for_year(year,'US') %>
+        <tr class="<%= cycle('list_line_odd','list_line_even') %>">
+          <td class='date'><%= year %></td>
+          <td class='rent'><%= number_to_currency(@us_tax_year['rent'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@us_tax_year['other_income'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@us_tax_year['mortgage'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@us_tax_year['insurance'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@us_tax_year['repairs'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@us_tax_year['real_estate'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@us_tax_year['solicitor'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@us_tax_year['council'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@us_tax_year['contents'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@us_tax_year['gas'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@us_tax_year['car'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@us_tax_year['upgrades'], unit: "£")%></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
