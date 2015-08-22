@@ -187,7 +187,7 @@ DEPENDENCIES
   prawn-table
   rails (= 4.2.2)
   rails_12factor
-  sass-rails (~> 5.0)
+  sass-rails
   sdoc (~> 0.4.0)
   turbolinks
   tzinfo-data
