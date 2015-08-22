@@ -1,0 +1,963 @@
+/* line 4, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+#tag_menu {
+  width: 150px;
+  max-height: 700px;
+  color: #666;
+  padding: 10px;
+  padding-right: 0px;
+  padding-left: 0px;
+  font-size: 12px;
+  position: absolute;
+}
+
+/* line 16, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+#tag_menu ul {
+  padding-left: 0px;
+}
+
+/* line 20, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+#tag_menu li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #888;
+  width: 100%;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+/* line 29, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+#tag_menu a {
+  color: #888;
+}
+
+/* line 37, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+#invoice_container {
+  margin-left: 150px;
+  -webkit-box-shadow: -20px 0px 30px -3px #F0F0F0;
+  box-shadow: -20px 0px 30px -3px #F0F0F0;
+  height: 100%;
+  padding: 10px;
+  min-height: 800px;
+}
+
+/* line 47, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+#invoice_summary {
+  padding: 10px;
+}
+
+/* line 51, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+#title {
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #D8D8D8;
+}
+
+/* line 59, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+#invoice_summary #search_form {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+/* line 65, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+#invoice_summary #search {
+  border-radius: 3px;
+  border-width: 1px;
+  font-size: 12px;
+  color: #666;
+  height: 35px;
+  margin-right: 5px;
+  width: 250px;
+  padding: 5px;
+}
+
+/* line 76, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+#invoice_summary .btn {
+  color: white;
+  background: #45cae6;
+  border: none;
+  padding: 7px 10px 7px 10px;
+  border-radius: 3px;
+}
+
+/* line 88, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+#totals {
+  position: relative;
+  width: 100%;
+}
+
+/* line 93, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+#totals span {
+  position: relative;
+  font-size: 10px;
+  font-weight: bold;
+  color: #888;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  display: block;
+  width: 100%;
+}
+
+/* line 105, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+#totals #sum {
+  padding-left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+}
+
+/* line 112, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+#totals button {
+  padding: 3px 10px 3px 10px;
+  border-radius: 6px;
+  background-color: white;
+  float: right;
+  border: 1px solid #D8D8D8;
+  margin-top: 3px;
+}
+
+/* line 121, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+#filter_list {
+  padding: 5px 10px 5px 10px;
+  float: right;
+  margin-bottom: 5px;
+  margin-right: 20px;
+  font-size: 10px;
+}
+
+/* line 129, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+.filters {
+  background: #404040;
+  border: 1px solid #D8D8D8;
+  color: #F8F8F8;
+  float: right;
+  margin-left: 5px;
+  padding-left: 5px;
+}
+
+/* line 138, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+.filter {
+  float: right;
+  color: #F8F8F8;
+  font-size: 10px;
+  padding: 0px 3px 0px 3px;
+}
+
+/* line 145, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+#clear_filter {
+  float: right;
+  margin-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 151, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+#clear_filter a {
+  color: #F8F8F8;
+}
+
+/* line 155, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+#filter_title {
+  float: right;
+  padding-right: 5px;
+}
+
+/* line 160, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+.list_line_even {
+  background-color: #F8F8F8;
+}
+
+/* line 164, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+td, th {
+  border-bottom: 1px solid #E8E8E8;
+  border-left: 1px solid #E8E8E8;
+  padding: 5px;
+  padding-left: 10px;
+}
+
+/* line 171, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+td span {
+  width: 100%;
+}
+
+/* line 175, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+table.invoices {
+  border: 1px solid #E8E8E8;
+  width: 100%;
+  color: #888;
+  font-family: "AvenirLTStd-Roman", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Lucida Grande", sans-serif;
+  font-style: italic;
+}
+
+/* line 183, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+tr.header {
+  background: -webkit-linear-gradient(top, #ffffff, #e8e8e8);
+  background: -moz-linear-gradient(top, #ffffff, #e8e8e8);
+}
+
+/* line 188, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+tbody tr:hover {
+  background-color: #E0FFE0;
+}
+
+/* line 191, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+.amount {
+  width: 10%;
+  text-align: right;
+}
+
+/* line 196, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+.negative_value {
+  color: red;
+}
+
+/* line 200, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+.positive_value {
+  color: #0AC775;
+}
+
+/* line 204, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+.date {
+  width: 12%;
+}
+
+/* line 208, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+.name {
+  width: 38%;
+}
+
+/* line 212, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+.owner {
+  width: 10%;
+}
+
+/* line 216, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+.tennant {
+  width: 15%;
+}
+
+/* line 220, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+.category {
+  width: 15%;
+}
+
+/* line 224, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+.best_in_place {
+  display: block;
+  width: 100%;
+}
+
+/* line 229, c:/Sites/tbfinancesv1/app/assets/stylesheets/invoices.scss */
+.bip_input_field input {
+  width: 100%;
+}
+/* line 5, c:/Sites/tbfinancesv1/app/assets/stylesheets/owners.scss */
+#owners {
+  color: #A8A8A8;
+  margin-left: 20px;
+}
+
+/* line 10, c:/Sites/tbfinancesv1/app/assets/stylesheets/owners.scss */
+table.owners {
+  border: 1px solid #E8E8E8;
+  width: 100%;
+  color: #888;
+  font-family: "AvenirLTStd-Roman", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Lucida Grande", sans-serif;
+  font-style: italic;
+}
+/* line 5, c:/Sites/tbfinancesv1/app/assets/stylesheets/properties.scss */
+#properties {
+  width: 100%;
+}
+
+/* line 9, c:/Sites/tbfinancesv1/app/assets/stylesheets/properties.scss */
+#properties h1 {
+  color: #A8A8A8;
+  margin-left: 20px;
+}
+
+/* line 14, c:/Sites/tbfinancesv1/app/assets/stylesheets/properties.scss */
+#new_property {
+  width: 100%;
+  height: 30px;
+  position: relative;
+}
+
+/* line 20, c:/Sites/tbfinancesv1/app/assets/stylesheets/properties.scss */
+#new_property a {
+  float: right;
+  position: absolute;
+  right: 20px;
+  top: 0px;
+  color: white;
+  background: #45cae6;
+  border: none;
+  padding: 3px 10px 3px 10px;
+  border-radius: 3px;
+}
+
+/* line 32, c:/Sites/tbfinancesv1/app/assets/stylesheets/properties.scss */
+#property {
+  width: 49%;
+  display: inline-block;
+  margin-left: 5px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+/* line 40, c:/Sites/tbfinancesv1/app/assets/stylesheets/properties.scss */
+#property_header {
+  background-color: #282828;
+  color: #F8F8F8;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 5px 20px 5px 20px;
+}
+
+/* line 48, c:/Sites/tbfinancesv1/app/assets/stylesheets/properties.scss */
+ul#property_address {
+  display: block;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0px;
+  padding: 20px;
+  border-bottom: 1px solid #C8C8C8;
+}
+
+/* line 57, c:/Sites/tbfinancesv1/app/assets/stylesheets/properties.scss */
+ul#property_address li {
+  text-decoration: none;
+}
+
+/* line 61, c:/Sites/tbfinancesv1/app/assets/stylesheets/properties.scss */
+#property #tennants {
+  display: block;
+  margin: 0px;
+  padding: 20px;
+  border-bottom: 1px solid #C8C8C8;
+  background-color: #F0F0F0;
+}
+
+/* line 69, c:/Sites/tbfinancesv1/app/assets/stylesheets/properties.scss */
+#property #tennants #tennant {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-right: 1px solid #C8C8C8;
+}
+
+/* line 76, c:/Sites/tbfinancesv1/app/assets/stylesheets/properties.scss */
+#property #editors {
+  background-color: #E0FFE0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* line 82, c:/Sites/tbfinancesv1/app/assets/stylesheets/properties.scss */
+#property #editors div {
+  display: inline-block;
+  padding: 5px 0px 5px 20px;
+}
+/* line 1, c:/Sites/tbfinancesv1/app/assets/stylesheets/scaffolds.scss */
+html {
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+}
+
+/* line 6, c:/Sites/tbfinancesv1/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: "AvenirLTStd-Roman", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Lucida Grande", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 14, c:/Sites/tbfinancesv1/app/assets/stylesheets/scaffolds.scss */
+.title {
+  color: #A8A8A8;
+  margin-left: 20px;
+}
+
+/* line 19, c:/Sites/tbfinancesv1/app/assets/stylesheets/scaffolds.scss */
+table {
+  border: 1px solid #E8E8E8;
+  width: 100%;
+  color: #888;
+  font-family: "AvenirLTStd-Roman", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Lucida Grande", sans-serif;
+  font-style: italic;
+}
+
+/* line 27, c:/Sites/tbfinancesv1/app/assets/stylesheets/scaffolds.scss */
+tr.header {
+  background: -webkit-linear-gradient(top, #ffffff, #e8e8e8);
+  background: -moz-linear-gradient(top, #ffffff, #e8e8e8);
+}
+
+/* line 32, c:/Sites/tbfinancesv1/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 38, c:/Sites/tbfinancesv1/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 44, c:/Sites/tbfinancesv1/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 47, c:/Sites/tbfinancesv1/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 51, c:/Sites/tbfinancesv1/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 58, c:/Sites/tbfinancesv1/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 63, c:/Sites/tbfinancesv1/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+  margin: 0px;
+}
+
+/* line 68, c:/Sites/tbfinancesv1/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 74, c:/Sites/tbfinancesv1/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 82, c:/Sites/tbfinancesv1/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 93, c:/Sites/tbfinancesv1/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 99, c:/Sites/tbfinancesv1/app/assets/stylesheets/scaffolds.scss */
+#paginator {
+  padding: 10px;
+}
+/* line 5, c:/Sites/tbfinancesv1/app/assets/stylesheets/taxes.scss */
+#tax_summary #title {
+  padding-top: 20px;
+  color: #A8A8A8;
+  margin-left: 20px;
+}
+
+/* line 11, c:/Sites/tbfinancesv1/app/assets/stylesheets/taxes.scss */
+#tax_table_title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 16, c:/Sites/tbfinancesv1/app/assets/stylesheets/taxes.scss */
+#tax_table_title span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* line 21, c:/Sites/tbfinancesv1/app/assets/stylesheets/taxes.scss */
+#tax_year_selector_container {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: #45cae6;
+  border: none;
+}
+
+/* line 29, c:/Sites/tbfinancesv1/app/assets/stylesheets/taxes.scss */
+#tax_year_selector {
+  padding: 7px 10px 7px 10px;
+  color: white;
+  border: 1px solid black;
+  width: 130px;
+}
+
+/* line 36, c:/Sites/tbfinancesv1/app/assets/stylesheets/taxes.scss */
+#tax_year_selector ul {
+  width: 130px;
+  display: none;
+  margin: 0px;
+  right: -2px;
+  margin-top: 7px;
+  position: absolute;
+  background: white;
+  border: 1px solid black;
+  padding: 7px 10px 7px 10px;
+}
+
+/* line 48, c:/Sites/tbfinancesv1/app/assets/stylesheets/taxes.scss */
+#tax_year_selector:hover {
+  position: relative;
+}
+
+/* line 51, c:/Sites/tbfinancesv1/app/assets/stylesheets/taxes.scss */
+#tax_year_selector:hover ul {
+  display: block;
+}
+
+/* line 55, c:/Sites/tbfinancesv1/app/assets/stylesheets/taxes.scss */
+#tax_year_selector li {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
+  border-bottom: 1px solid #F0F0F0;
+}
+/* line 4, c:/Sites/tbfinancesv1/app/assets/stylesheets/tennants.scss */
+table.tennants {
+  border: 1px solid #E8E8E8;
+  width: 100%;
+  color: #888;
+  font-family: "AvenirLTStd-Roman", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Lucida Grande", sans-serif;
+  font-style: italic;
+}
+/* line 5, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+#tag_menu {
+  width: 150px;
+  max-height: 700px;
+  color: #666;
+  padding: 10px;
+  padding-right: 0px;
+  padding-left: 0px;
+  font-size: 12px;
+  position: absolute;
+}
+
+/* line 18, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+#tag_menu ul {
+  padding-left: 0px;
+}
+
+/* line 22, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+#tag_menu li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #888;
+  width: 100%;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+/* line 31, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+#tag_menu a {
+  color: #888;
+}
+
+/* line 39, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+#transaction_container {
+  margin-left: 150px;
+  -webkit-box-shadow: -20px 0px 30px -3px #F0F0F0;
+  box-shadow: -20px 0px 30px -3px #F0F0F0;
+  height: 100%;
+  padding: 10px;
+  min-height: 800px;
+}
+
+/* line 49, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+#transaction_summary {
+  padding: 10px;
+}
+
+/* line 53, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+#title {
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #D8D8D8;
+}
+
+/* line 61, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+#transaction_summary #search_form {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+/* line 67, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+#transaction_summary #search {
+  border-radius: 3px;
+  border-width: 1px;
+  font-size: 12px;
+  color: #666;
+  height: 35px;
+  margin-right: 5px;
+  width: 250px;
+  padding: 5px;
+}
+
+/* line 78, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+#transaction_summary .btn {
+  color: white;
+  background: #45cae6;
+  border: none;
+  padding: 7px 10px 7px 10px;
+  border-radius: 3px;
+}
+
+/* line 90, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+#totals {
+  position: relative;
+  width: 100%;
+}
+
+/* line 95, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+#totals span {
+  position: relative;
+  font-size: 10px;
+  font-weight: bold;
+  color: #888;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  display: block;
+  width: 100%;
+}
+
+/* line 107, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+#totals #sum {
+  padding-left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+}
+
+/* line 114, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+#totals button {
+  padding: 3px 10px 3px 10px;
+  border-radius: 6px;
+  background-color: white;
+  float: right;
+  border: 1px solid #D8D8D8;
+  margin-top: 3px;
+}
+
+/* line 123, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+#filter_list {
+  padding: 5px 10px 5px 10px;
+  float: right;
+  margin-bottom: 5px;
+  margin-right: 20px;
+  font-size: 10px;
+}
+
+/* line 131, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+.filters {
+  background: #404040;
+  border: 1px solid #D8D8D8;
+  color: #F8F8F8;
+  float: right;
+  margin-left: 5px;
+  padding-left: 5px;
+}
+
+/* line 140, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+.filter {
+  float: right;
+  color: #F8F8F8;
+  font-size: 10px;
+  padding: 0px 3px 0px 3px;
+}
+
+/* line 147, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+#clear_filter {
+  float: right;
+  margin-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 153, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+#clear_filter a {
+  color: #F8F8F8;
+}
+
+/* line 157, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+#filter_title {
+  float: right;
+  padding-right: 5px;
+}
+
+/* line 162, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+.list_line_even {
+  background-color: #F8F8F8;
+}
+
+/* line 166, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+td, th {
+  border-bottom: 1px solid #E8E8E8;
+  border-left: 1px solid #E8E8E8;
+  padding: 5px;
+  padding-left: 10px;
+}
+
+/* line 173, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+td span {
+  width: 100%;
+}
+
+/* line 177, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+tbody tr:hover {
+  background-color: #E0FFE0;
+}
+
+/* line 180, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+.amount {
+  width: 10%;
+  text-align: right;
+}
+
+/* line 185, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+.negative_value {
+  color: red;
+}
+
+/* line 189, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+.positive_value {
+  color: #0AC775;
+}
+
+/* line 193, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+.date {
+  width: 12%;
+}
+
+/* line 197, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+.name {
+  width: 38%;
+}
+
+/* line 201, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+.owner {
+  width: 10%;
+}
+
+/* line 205, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+.tennant {
+  width: 15%;
+}
+
+/* line 209, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+.category {
+  width: 15%;
+}
+
+/* line 213, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+.best_in_place {
+  display: block;
+  width: 100%;
+}
+
+/* line 218, c:/Sites/tbfinancesv1/app/assets/stylesheets/transactions.scss */
+.bip_input_field input {
+  width: 100%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+ 
+{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+ 	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  	box-sizing: inherit;
+}
+
+html, body { 
+	margin: 0px;
+	padding: 0px;
+	border: 0px; 
+}
+
+li {
+	font-family: sans-serif;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+a:hover {
+	color: #E0FFE0;
+}
+
+table {
+	border-spacing: 0px;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+.list_line_even {
+	background-color: #F8F8F8;
+}
+
+#nav_container {
+	background-color: #F8F8F8;
+	height:110px;
+	font-family: sans-serif;
+	position: relative;
+}
+
+#top_nav {
+	height:30px;
+	background-color: #333;
+	position: relative;
+}
+
+#top_nav_links {
+	position: relative;
+	margin: 0px auto 0px auto;
+	max-width: 1000px;
+	text-decoration: none;
+	list-style-type: none;
+	height:30px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+#top_nav_links li {
+	color: #ccc;
+	float: right;
+	margin-top: 7px;
+	text-decoration: none;
+	font-family: "AvenirLTStd-Roman", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Lucida Grande", sans-serif;
+	padding-right: 10px;
+}
+
+#top_nav_links a {
+	color: #ccc;
+
+}
+
+#top_nav_links div {
+	color: #ccc;
+	padding-top: 5px;
+}
+
+
+
+#bottom_nav {
+	height:80px;
+	position:relative;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1000px;
+}
+
+#bottom_nav	img {
+	position: absolute;
+	top: 10px;
+	left:5px;
+
+}
+
+#bottom_nav	span {
+	position: absolute;
+	top: 30px;
+	left: 70px;
+	font-size: 20px;
+	font-weight: 900;
+	font: sans-serif;
+
+}
+
+#navigation {
+	position: absolute;
+	top:17px;
+	right:0px;
+	list-style: none;
+}
+
+#navigation li{
+	float: right;
+	padding-right: 5px;
+	font: sans-serif;
+	margin-left:20px;
+	font-size: 13px;
+	font: sans-serif;
+	color:#666;
+}
+
+
+#wrapper {
+	max-width:1000px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	position:relative;
+}
+
+.list_line_even {
+	background-color: #F8F8F8;
+}
+
+#login_template {
+	margin: auto;
+	width:50%;
+	text-align: center;
+}
+
+#login_template input{
+	width: 400px;
+	height: 40px;
+	padding: 10px;
+}
+
+#login_template input[type~="checkbox"] {
+	width: 10px;
+	height: 15px;
+}

@@ -1,0 +1,60 @@
+// Place all the styles related to the tax controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#tax_summary #title{
+	padding-top: 20px;
+	color: #A8A8A8;
+    margin-left: 20px;
+}
+
+#tax_table_title {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#tax_table_title span{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#tax_year_selector_container {
+	position: absolute;
+	right: 10px;
+	top:10px;
+    background: #45cae6;
+    border: none;
+}
+
+#tax_year_selector {
+	padding: 7px 10px 7px 10px;
+	color: white;
+	border: 1px solid black;
+	width:130px;
+}
+
+#tax_year_selector ul {
+  width: 130px;
+  display: none;
+  margin: 0px;
+  right: -2px; 
+  margin-top: 7px; 
+  position: absolute;
+  background: white;
+  border: 1px solid black;
+  padding: 7px 10px 7px 10px;
+}
+
+#tax_year_selector:hover {
+  position: relative;
+}
+#tax_year_selector:hover ul {
+  display: block;
+}
+
+#tax_year_selector li {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	text-align: center;
+	border-bottom: 1px solid #F0F0F0;
+}
