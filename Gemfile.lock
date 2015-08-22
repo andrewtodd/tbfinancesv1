@@ -187,6 +187,7 @@ DEPENDENCIES
   prawn-table
   rails (= 4.2.2)
   rails_12factor
+  sass
   sass-rails
   sdoc (~> 0.4.0)
   turbolinks
