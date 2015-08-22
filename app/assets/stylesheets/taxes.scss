@@ -37,15 +37,8 @@
   width: 130px;
   display: none;
   margin: 0px;
-  right: -2px; /* ul would align with the inside of the selectors right side border. In order to get it to 
-  				  line up with with the outside of the border we have to set position it -2px from the right.
-  				  I'm not sure why this is not 1px since the border on the right is 1px wide but it does.
-				  I could guess it's because the elignment is accounting for both the right and left border
-				  but I don't know why it would do that */
-
-  margin-top: 7px; /* ul would be positioned directly below the span, but we want it to be positioned below the
-  					  the selector. Because the selector has 7px of padding at the bottom, we need to add a top margin 
-  					  of 7px here to ensure it's positioned directly below the selector   */ 
+  right: -2px; 
+  margin-top: 7px; 
   position: absolute;
   background: white;
   border: 1px solid black;
