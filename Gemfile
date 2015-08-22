@@ -58,7 +58,7 @@ gem 'devise'
 
 #gem 'mysqltopostgres', git: "https://github.com/maxlapshin/mysql2postgres.git"
 
-gem 'mysqltopostgres'
+#gem 'mysqltopostgres'
 
 gem 'pg'
 
