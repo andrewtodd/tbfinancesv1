@@ -1,5 +1,7 @@
 class InvoicesController < ApplicationController
 
+  include InvoicesHelper
+
 	def index
 		@invoices = Invoice.filter(params.slice(:invoice_type)).page(params[:page])
 	
@@ -10,9 +12,15 @@ class InvoicesController < ApplicationController
 
   end
 
+  def generate
+    invoice_count = generate_invoices
+
+    redirect_to invoices_url, notice: "#{invoice_count} invoices created"
+  end
+
 	def show
     	@invoice = Invoice.find(params[:id])
-  	end
+  end
 
   def new
     @invoices = Invoice.new
@@ -28,5 +36,5 @@ class InvoicesController < ApplicationController
   private
 	def invoice_params
     	params.require(:invoice).permit(:tennant_id, :description, :amount, :created_at)
-  	end
+  end
 end

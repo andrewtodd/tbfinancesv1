@@ -23,12 +23,15 @@
 
   </div>
   <div>
+    <div id='generate_invoices'>
+      <%= link_to 'Generate Invoices', :controller => :invoices, :action => :generate %>
+    </div>
     <div id="paginator">
       <%= paginate @invoices, :remote => true %>
     </div>
     <table class='invoices'>
       <thead>
-      <tr class='header'>
+        <tr class='header'>
           <th class='generated'>Generated</th>
           <th class='description'>Description</th>
           <th class='tennant'>Tennant</th>

@@ -82,13 +82,13 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :user_name            => ENV['tbproperties@gmail.com'],
-    :password             => ENV['bellamy2'],
+    :user_name            => ENV['G_USERNAME'],
+    :password             => ENV['G_PASSWORD'],
     :authentication       => "plain",
     :enable_starttls_auto => true
   }
 
   # need to change this once we have a hosting solution
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'https://fathomless-basin-4087.herokuapp.com'}
 
 end
