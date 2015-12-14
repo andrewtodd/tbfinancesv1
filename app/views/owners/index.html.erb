@@ -5,6 +5,7 @@
 <table class='owners'>
   <thead>
     <tr>
+      <th>ID</th>
       <th>First name</th>
       <th>Last name</th>
       <th>Phone</th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @owners.each do |owner| %>
       <tr class="<%= cycle('list_line_odd','list_line_even') %>">
+        <td><%= owner.id %></td>
         <td><%= owner.first_name %></td>
         <td><%= owner.last_name %></td>
         <td><%= owner.phone %></td>

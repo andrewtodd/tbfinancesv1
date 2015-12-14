@@ -2,7 +2,7 @@
           <tr class="<%= cycle('list_line_odd','list_line_even') %>">
             <td class='date'><%= best_in_place transaction, :date, { :class => "bip_input_field" } %></td>
             <td class='name'><%= best_in_place transaction, :name, { :class => "bip_input_field" } %></td>
-            <td class='category'><%= best_in_place transaction, :category, { :class => "bip_input_field" } %></td>
+            <td><%= best_in_place transaction, :category, :class => "bip_input_field", :as => :select, :collection => @categories %></td>
             <td class='owner'><%= best_in_place transaction, :owner_id, :class => "bip_input_field", :as => :select, :collection => {"" => "-", "1" => "Andrew", "2" => "Wayne"} %></td>
             <td class='tennant'><%= best_in_place transaction, :tennant_id, :class => "bip_input_field", :as => :select, :collection => @tennant_collection %></td>
             <td class="<%= update_currency_class(transaction.amount,'amount') %>"><%= best_in_place transaction, :amount, { :class => "bip_input_field", :display_with => :number_to_currency, :helper_options => {:unit => "£"}} %></td>

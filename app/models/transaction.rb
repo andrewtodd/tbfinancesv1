@@ -45,6 +45,26 @@ class Transaction < ActiveRecord::Base
 		where("name like ?", "%#{search}%")
 	end
 
+	def self.categories
+    	#### CATEGORIES
+		#     used to populate the categories drop down
+		categories = [ 
+						['rent','rent'],
+						['owner','owner'],
+						['tax','tax'],
+						['insurance','insurance'],
+						['repairs','repairs'],
+						['council','council'],
+						['tax','tax'],
+						['utility','utility'],
+						['mortgage','mortgage'],
+						['agent','agent'],
+						['deposit','deposit'],
+						['uncategorized','uncategorized']
+			       ]
+       return categories
+    end
+
 
 end
 

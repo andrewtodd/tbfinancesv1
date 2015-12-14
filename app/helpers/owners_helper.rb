@@ -15,10 +15,20 @@ module OwnersHelper
 		# we use plus here because if the owner transaction amount was a debit from the account (which is most likely)
 		# it will be recorded as a debit and therefore be a negative number.
 
+		# because we transfered our finances to this app we need to set a starting balance so that amount
+		# owed considers what each owner owed prior to moving to this system.
+		if owner.id == 1
+			starting_balance = -98.28
+		elsif owner.id == 2
+			starting_balance = 3685.1
+		else 
+			starting_balance = 0
+		end
+
 		# eg if the business owner transaction sum is 2000 (meaning between owners we're 4000 in profit) 
-		# and 1 owner takes 1000 amount the owner is owed owed would be:
+		# and 1 owner takes 1000 amount the owner is owed would be:
 		# 	2000 + (-1000) = 1000. He would still be owed 1000  
-		amount_owed = business_transaction_sum + owner_transaction_sum
+		amount_owed = business_transaction_sum + owner_transaction_sum + starting_balance
 
 		return amount_owed
 	end

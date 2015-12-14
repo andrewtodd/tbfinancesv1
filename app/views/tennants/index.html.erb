@@ -12,6 +12,9 @@
       <th class='email'>Email</th>
       <th class='phone'>Phone</th>
       <th class='notes'>Notes</th>
+      <th class='rent_paid'>Rent Paid</th>
+      <th class='rent_paid'>Rent Due</th>
+      <th class='rent_paid'>Rent Owes</th> 
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -25,6 +28,9 @@
         <td class='email'><%= tennant.email %></td>
         <td class='phone'><%= tennant.phone %></td>
         <td class='notes'><%= tennant.notes %></td>
+        <td id='sum' class="<%= update_currency_class(tennant.transactions.sum(:amount),'') %>"><%=number_to_currency(tennant.transactions.sum(:amount), unit: "£")%></td>
+        <td></td>
+        <td></td>
         <td><%= link_to 'Show', tennant %></td>
         <td><%= link_to 'Edit', edit_tennant_path(tennant) %></td>
         <td><%= link_to 'Destroy', tennant, method: :delete, data: { confirm: 'Are you sure?' } %></td>

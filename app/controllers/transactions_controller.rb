@@ -1,5 +1,6 @@
 class TransactionsController < ApplicationController
   before_action :set_transaction, only: [:show, :edit, :update, :destroy]
+  before_action :set_dropdowns, only: [:show, :edit, :index]
 
   include TransactionsHelper
 
@@ -77,8 +78,7 @@ class TransactionsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /transactions/1
-  # PATCH/PUT /transactions/1.json
+
   def update
     respond_to do |format|
       if @transaction.update(transaction_params)
@@ -90,6 +90,8 @@ class TransactionsController < ApplicationController
       end
     end
   end
+
+  
 
   # DELETE /transactions/1
   # DELETE /transactions/1.json
@@ -121,6 +123,10 @@ end
     # Use callbacks to share common setup or constraints between actions.
     def set_transaction
       @transaction = Transaction.find(params[:id])
+    end
+
+    def set_dropdowns
+      @categories = Transaction.categories
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
