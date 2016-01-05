@@ -22,6 +22,8 @@ module TransactionsHelper
   			row_count += 1
   			csv_hash = row.to_hash
 
+  			Rails.logger.debug(" ******************* csv row #{csv_hash}.inspect")
+
   			transaction_hash = Hash.new
     		transaction_hash['date'] = csv_hash['Transaction Date']
     		transaction_hash['name'] = csv_hash['Transaction Description'].truncate(255)
@@ -82,6 +84,8 @@ module TransactionsHelper
 	
 			end
 
+			Rails.logger.debug(" ******************* transaction hash #{transaction_hash}.inspect")
+
 			@transaction = Transaction.new(transaction_hash)
 
 			if @transaction.save
@@ -91,6 +95,7 @@ module TransactionsHelper
 				# we need to log the error so we can see what went wrong
 #				output = File.open(error_log_file,"w" )
 #				File.open(error_log_file, 'a') do |file|
+				
 				time = Time.new()
 				@transaction.errors.full_messages.each do |message|
 					error_hash = {
@@ -102,12 +107,13 @@ module TransactionsHelper
 					}
 
 					@error = ErrorLog.create!(error_hash)
-
+					Rails.logger.debug(" ******************* transaction error #{error_hash}.inspect")
 
 #						output << 
 #						file.puts "#{time},#{row_count},#{transaction_hash['name']},#{message}"
 #					end
 				end
+
 	#			output.close
   			end
   		end
