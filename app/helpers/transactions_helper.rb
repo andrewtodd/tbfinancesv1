@@ -61,10 +61,10 @@ module TransactionsHelper
     		if transaction_hash['category'].nil? || transaction_hash['category'] == ''
 
 	    		# check to see if this is an owner transaction 
-    			if /(Andrew Todd|A TODD)/.match(transaction_hash['name'])
+    			if /(Andrew Todd|TODD)/.match(transaction_hash['name'])
     				transaction_hash['owner_id'] = 1
 					transaction_hash['category'] = 'owner'
-	    		elsif /(Wayne Barker|W BARKER)/.match(transaction_hash['name'])
+	    		elsif /(Wayne Barker|BARKER)/.match(transaction_hash['name'])
     				transaction_hash['owner_id'] = 2
 					transaction_hash['category'] = 'owner'
 				# check to see if this is an mortgage transaction 

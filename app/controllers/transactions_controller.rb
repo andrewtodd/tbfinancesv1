@@ -7,7 +7,7 @@ class TransactionsController < ApplicationController
   # GET /transactions
   # GET /transactions.json
   def index
-    @transactions = Transaction.filter(params.slice(:category, :transaction_type, :owner)).page(params[:page])
+    @transactions = Transaction.filter(params.slice(:category, :transaction_type, :owner)).page(params[:page]).order("date DESC")
 
 
     # We use the filter and slice functions here)
