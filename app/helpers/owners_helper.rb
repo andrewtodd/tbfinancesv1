@@ -12,8 +12,8 @@ module OwnersHelper
 
 		# !! this is very important. The transactions include a starting balance that was carried over from the
 		# old system. This is not a business transaction but will be returned in @business_transactions, so 
-		# we'll need to deduct it. 
-		account_starting_balance = 3586.82
+		# we'll need to deduct it. Since we half the business transaction sum we also have to half this.
+		account_starting_balance = 3586.82/2
 
 		Rails.logger.debug("***************btrans sum: #{business_transaction_sum}")
 		
