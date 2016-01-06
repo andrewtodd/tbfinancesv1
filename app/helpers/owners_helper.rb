@@ -36,12 +36,12 @@ module OwnersHelper
 			owner_starting_balance = 0
 		end
 
-		Rails.logger.debug("***************starting_balance: #{starting_balance}")
+		Rails.logger.debug("***************starting_balance: #{owner_starting_balance}")
 
 		# eg if the business owner transaction sum is 2000 (meaning between owners we're 4000 in profit) 
 		# and 1 owner takes 1000, the amount the owner is owed would be:
 		# 	2000 + (-1000) = 1000. He would still be owed 1000  
-		amount_owed = (business_transaction_sum - account_starting_balance) + (owner_transaction_sum + starting_balance)
+		amount_owed = (business_transaction_sum - account_starting_balance) + (owner_transaction_sum + owner_starting_balance)
 
 		Rails.logger.debug("***************amount_owed: #{amount_owed}")
 
