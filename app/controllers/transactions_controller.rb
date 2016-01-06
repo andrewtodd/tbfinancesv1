@@ -42,6 +42,8 @@ class TransactionsController < ApplicationController
     @tennant_collection = Hash.new()
     
     @tennants = Tennant.all
+
+    @tennant_collection[""] = ""
     @tennants.each do |tennant|
       @tennant_collection[tennant.id] = tennant.first_name+" "+tennant.last_name
     end
