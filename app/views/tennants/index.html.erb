@@ -29,8 +29,8 @@
         <td class='phone'><%= tennant.phone %></td>
         <td class='notes'><%= tennant.notes %></td>
         <td id='sum' class="<%= update_currency_class(tennant.transactions.sum(:amount),'') %>"><%=number_to_currency(tennant.transactions.sum(:amount), unit: "£")%></td>
-        <td></td>
-        <td></td>
+        <td id='sum' class="<%= update_currency_class(tennant.invoices.sum(:amount),'') %>"><%=number_to_currency(tennant.invoices.sum(:amount), unit: "£")%></td>
+        <td id='sum' class="<%= update_currency_class((tennant.invoices.sum(:amount)),'') %>"><%=number_to_currency((tennant.invoices.sum(:amount).to_i-tennant.transactions.sum(:amount).to_i), unit: "£")%></td>
         <td><%= link_to 'Show', tennant %></td>
         <td><%= link_to 'Edit', edit_tennant_path(tennant) %></td>
         <td><%= link_to 'Destroy', tennant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
