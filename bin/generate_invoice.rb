@@ -19,29 +19,34 @@ properties_hash = Hash[Property.all.map { |p| [p.id, p] }]
 
 @tennants.each do |tennant|
 	# STEP 1: Make sure we need to add an invoice for this merchant
-	
-	## IMPORTANT - FIRST WE HAVE TO CHECK TO SEE IF THE TENNANT IS STILL ACTIVE
 
 	###### we need to make sure this can be ran for several months just in case we forget to run it.
-	## 		- to do this we're going to set a last run month rather than last run date.
-	## 		- ie 201503 would mean that it was last ran for march of 2015 
 
-	## 		- first month should be free since it's always paid via easilet
+	invoice_next_run = ''
+	if !tennant.invoice_next_run.nil?
+		invoice_next_run = tennant.invoice_next_run
+	else
+		# this is the first invoice generated for this tennant
+		move_in_date = properties_hash[tennant.property_id].start_date
+		move_out_date = properties_hash[tennant.property_id].end_date
 
+		# invoices are due before the start of the month. We run this for the actual month so if the tennant
+		# has not already made a payment to cover it, they are past due.
 
-	last_run_month = ''
-	if !tennant.invoice_last_run.nil?
-		last_run_month = tennant.invoice_last_run.strftime("%B")
+		# The rental company pays the first months rent on their behalf (minus half a month commission) so 
+		# the last_run_month is the tennants first month
+
+		invoice_next_run = move_in_date.strftime("%Y:%m:01")
+
 	end
 
-	puts last_run_month
+	puts invoice_next_run
 
 	current_date = Date.today
-	current_month = current_date.strftime("%B")
-
-	puts current_month
+	puts current_date
 	# next if we've already added an invoice this month
-	next if current_month == last_run_month
+	next if current_date < invoice_next_run
+	next if invoice_next_run > move_out_date
 
 	## STEP 3: we need as to start building the array of arrays that will contain
 	## 			the transaction data that will be displayed as a table in the pdf 
@@ -112,13 +117,16 @@ properties_hash = Hash[Property.all.map { |p| [p.id, p] }]
 
 	# STEP 4: save invoice to pdf
 
-	pdf = InvoiceReportPdf.new(invoice)
-	pdf.render_file "/Sites/tbfinancesv1/app/assets/attachments/invoice.pdf"
+#	pdf = InvoiceReportPdf.new(invoice)
+#	pdf.render_file "/Sites/tbfinancesv1/app/assets/attachments/invoice.pdf"
 
 	# STEP 5: send invoice to tennant
-	TennantMailer.send_invoice(tennant,'Wayne Barker',1111111111,current_month).deliver_now
+#	TennantMailer.send_invoice(tennant,'Wayne Barker',1111111111,current_month).deliver_now
 
 	# STEP 6: update tennant table to make sure we don't run this again until a month from now
-#	tennant.update_attribute(:invoice_last_run,Time.now)
+	next_run_date = invoice_next_run+1.month
+	Rails.logger.debug("*********** next_run_date: #{next_run_date}")
+
+	tennant.update_attribute(:invoice_next_run,next_run_date)
 
 end

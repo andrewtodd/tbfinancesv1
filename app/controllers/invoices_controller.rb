@@ -1,5 +1,7 @@
 class InvoicesController < ApplicationController
 
+  before_action :set_invoice, only: [:show, :edit, :update, :destroy]
+
   include InvoicesHelper
 
 	def index
@@ -33,8 +35,21 @@ class InvoicesController < ApplicationController
   	redirect_to @invoice
   end
 
+  def destroy
+    @invoice.destroy
+    respond_to do |format|
+      format.html { redirect_to invoices_url, notice: 'Invoice was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
   private
-	def invoice_params
+
+    def set_invoice
+      @invoice = Invoice.find(params[:id])
+    end
+	
+  def invoice_params
     	params.require(:invoice).permit(:tennant_id, :description, :amount, :created_at)
   end
 end
