@@ -51,7 +51,7 @@
   </thead>
 
   <tbody>
-    <% @tennant.transactions.each do |transaction| %>
+    <% @tennant.transactions.sort { |a,b| a.date <=> b.date }.each do |transaction| %>
       <tr>
         <td><%= transaction.generated_by %></td>
         <td><%= transaction.amount %></td>

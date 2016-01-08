@@ -5,7 +5,7 @@ class InvoicesController < ApplicationController
   include InvoicesHelper
 
 	def index
-		@invoices = Invoice.filter(params.slice(:invoice_type)).page(params[:page])
+		@invoices = Invoice.filter(params.slice(:invoice_type)).page(params[:page]).order("created_at DESC")
 	
    if params[:search]
 #      Rails.logger.debug("My object: #{params.inspect}")
