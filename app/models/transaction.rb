@@ -40,6 +40,7 @@ class Transaction < ActiveRecord::Base
 
   	scope :tax_year, -> (start_date,end_date) { where("date BETWEEN ? AND ?",start_date,end_date) }
   	scope :business_transactions, -> { where ("owner_id IS NULL") }#used to calculate what owners are owed
+  	scope :by_tennant_id, -> (tennant_id) { where tennant_id: tennant_id }
 
   	def self.search(search)
 		where("name like ?", "%#{search}%")
