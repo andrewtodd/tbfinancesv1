@@ -9,7 +9,7 @@
     <li><%= link_to 'Debits', {:controller=>'transactions', :action=>'index', :transaction_type=>'debit'} %></li> <%# all none rails standard
     key value pairs passed with appear in the url. ie the url for this link will be .../transactions?transaction_type=debit %>
     <li><%= link_to 'Owner', {:controller=>'transactions', :action=>'index', :owner=>'Owners'} %></li>
-    <li><%= link_to 'Tax', {:controller=>'transactions', :action=>'index', :category=>'tax'} %></li>
+    <li><%= link_to 'Mortgage', {:controller=>'transactions', :action=>'index', :category=>'mortgage'} %></li>
     <li><%= link_to 'Rent', {:controller=>'transactions', :action=>'index', :category=>'rent'} %></li>
     <li><%= link_to 'Insurance', {:controller=>'transactions', :action=>'index', :category=>'insurance'} %></li>
     <li><%= link_to 'Repairs', {:controller=>'transactions', :action=>'index', :category=>'repairs'} %></li>
