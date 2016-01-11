@@ -40,6 +40,7 @@
           <th class='gas'>Energy</th>
           <th class='car'>Car</th>
           <th class='upgrades'>Upgrades</th>
+          <th class='deposit'>Deposit</th>
         </tr>
       </thead>
 
@@ -63,6 +64,7 @@
           <td class='rent'><%= number_to_currency(@uk_tax_year['gas'], unit: "£")%></td>
           <td class='rent'><%= number_to_currency(@uk_tax_year['car'], unit: "£")%></td>
           <td class='rent'><%= number_to_currency(@uk_tax_year['upgrades'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@uk_tax_year['deposit'], unit: "£")%></td>
 		    </tr>
       <% end %>
       </tbody>
@@ -87,6 +89,7 @@
           <th class='gas'>Energy</th>
           <th class='car'>Car</th>
           <th class='upgrades'>Upgrades</th>
+          <th class='deposit'>Deposit</th>
         </tr>
       </thead>
 
@@ -109,6 +112,7 @@
           <td class='rent'><%= number_to_currency(@us_tax_year['gas'], unit: "£")%></td>
           <td class='rent'><%= number_to_currency(@us_tax_year['car'], unit: "£")%></td>
           <td class='rent'><%= number_to_currency(@us_tax_year['upgrades'], unit: "£")%></td>
+          <td class='rent'><%= number_to_currency(@us_tax_year['deposit'], unit: "£")%></td>
         </tr>
       <% end %>
       </tbody>
