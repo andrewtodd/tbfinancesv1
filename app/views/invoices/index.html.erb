@@ -1,8 +1,8 @@
 <div id='tag_menu'>
   <span>TAGS</span>
   <ul id='tags'>
-    <li><%= link_to 'Fee', {:controller=>'invoices', :action=>'index', :invoice_type=>'fee'} %></li>
-    <li><%= link_to 'Rent', {:controller=>'invoices', :action=>'index', :invoice_type=>'rent'} %></li>
+    <li><%= link_to 'Fee', {:controller=>'invoices', :action=>'index', :invoice_type=>'Fee'} %></li>
+    <li><%= link_to 'Rent', {:controller=>'invoices', :action=>'index', :invoice_type=>'Rent'} %></li>
      <%# all none rails standard key value pairs passed will appear in the url. ie the url for this link will be .../invoices?invoice_type=rent %>
   </ul>
 </div>
@@ -36,6 +36,7 @@
           <th class='amount'>Amount</th>
           <th class='edit'>Edit</th>
           <th class='delete'>Delete</th>
+          <th class='show'>Show</th>
         </tr>
       </thead>
 
