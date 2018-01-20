@@ -62,7 +62,7 @@ gem 'devise'
 
 #gem 'mysqltopostgres'
 
-gem 'pg'
+gem 'pg', '~> 0.20'
 
 gem 'rails_12factor', group: :production
 
