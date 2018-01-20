@@ -7,8 +7,9 @@ class TransactionsController < ApplicationController
   # GET /transactions
   # GET /transactions.json
   def index
-    @transactions = Transaction.filter(params.slice(:category, :transaction_type, :owner)).page(params[:page]).order("date DESC")
-
+  #  @transactions = Transaction.filter(params.slice(:category, :transaction_type, :owner)).page(params[:page]).order("date DESC")
+  # removing pagination because edit in place doesn't work on any page but 1. I don't have time to fix the change in place issue
+    @transactions = Transaction.filter(params.slice(:category, :transaction_type, :owner)).order("date DESC")
 
     # We use the filter and slice functions here)
 

@@ -41,7 +41,7 @@ module InvoicesHelper
 				# has not already made a payment to cover it, they are past due.
 
 				# The rental company pays the first months rent on their behalf (minus half a month commission) so 
-				# the last_run_month is the tennants first month
+				# so we never create an invoice for the first month
 
 				invoice_next_run = move_in_date.strftime("%Y-%m-01")
 				invoice_next_run = (invoice_next_run.to_date >> 1) #rental company pays first month

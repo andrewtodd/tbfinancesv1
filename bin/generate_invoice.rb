@@ -1,5 +1,12 @@
 #!/usr/bin/env ruby
 
+##############################################3
+
+##### !!!!!!!!!!!!!!!! IMPORTANT
+
+# This script has been moved to helper
+
+###############################################
 def create_invoice(amount,tennant,description,type)
 	invoice = Hash.new
 	invoice['amount'] = amount
@@ -34,7 +41,7 @@ properties_hash = Hash[Property.all.map { |p| [p.id, p] }]
 		# has not already made a payment to cover it, they are past due.
 
 		# The rental company pays the first months rent on their behalf (minus half a month commission) so 
-		# the last_run_month is the tennants first month
+		# we shouldn't create an invoice for the first month
 
 		invoice_next_run = move_in_date.strftime("%Y:%m:01")
 
