@@ -66,4 +66,4 @@ gem 'pg', '~> 0.20'
 
 gem 'rails_12factor', group: :production
 
-ruby "2.1.6"
+ruby "2.7.2"
