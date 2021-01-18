@@ -30,7 +30,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #ading bundle because I'm getting an error that my bundle version is wrong
 #now heroku is giving me an error saying bundler is too old
-gem 'bundler', '1.17.1'
+#gem 'bundler', '1.17.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
