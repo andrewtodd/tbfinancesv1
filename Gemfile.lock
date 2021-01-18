@@ -191,7 +191,6 @@ PLATFORMS
 
 DEPENDENCIES
   best_in_place!
-  bundler (= 1.10.6)
   coffee-rails (~> 4.1.0)
   coffee-script-source (= 1.8.0)
   devise

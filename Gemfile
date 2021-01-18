@@ -28,8 +28,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-#adding bundle because I'm getting an error that my bundle version is wrong
-gem 'bundler', '1.10.6' 
+#ading bundle because I'm getting an error that my bundle version is wrong
+#now heroku is giving me an error saying bundler is too old
+#gem 'bundler', '1.10.6'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
