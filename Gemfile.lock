@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/bernat/best_in_place.git
+  remote: https://github.com/bernat/best_in_place.git
   revision: a3560e874444af8b2cf78419dc5eef020626c93c
   specs:
     best_in_place (3.1.1)
@@ -229,7 +229,6 @@ PLATFORMS
 
 DEPENDENCIES
   best_in_place!
-  bundler (= 1.17.1)
   coffee-rails (~> 4.2.2)
   coffee-script-source (= 1.8.0)
   devise
@@ -254,4 +253,4 @@ RUBY VERSION
    ruby 2.7.2p137
 
 BUNDLED WITH
-   1.17.1
+   2.2.5
