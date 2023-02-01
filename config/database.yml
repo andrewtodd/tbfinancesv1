@@ -19,6 +19,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
+  url: <%= ENV['DATABASE_URL'] %>
 #  host: localhost
   database: tbfinancesv1_production
   pool: 5
