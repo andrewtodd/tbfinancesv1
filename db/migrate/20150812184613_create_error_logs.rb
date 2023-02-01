@@ -1,4 +1,4 @@
-class CreateErrorLogs < ActiveRecord::Migration
+class CreateErrorLogs < ActiveRecord::Migration[6.1]
   def change
     create_table :error_logs do |t|
       t.date :date
